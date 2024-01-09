@@ -15,7 +15,8 @@
 }
 
 html {
-  scroll-snap-type: mandatory;
+  scroll-snap-type: proximity;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -30,6 +31,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+#gradient {
+  height: 20vh;
+  background: linear-gradient(rgba(241, 245, 249, 1), transparent);
 }
 
 #transition-slide {

@@ -20,7 +20,6 @@ const Tv: React.FC<TvProps> = ({
       "/demos/theoryvis-demo3.gif",
     ];
     const index = Math.floor(Math.random() * arr.length);
-    console.log("changing to", arr[index]);
     setChannel(arr[index]);
   };
 

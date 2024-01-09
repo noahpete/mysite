@@ -1,37 +1,19 @@
 "use client";
 
-import Link from "next/link";
-import Tv from "./tv";
 import Navbar from "./navbar";
 import { useEffect, useState } from "react";
+import Home from "./home";
+import Projects from "./projects";
 
 export default function Page() {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [lightH, setLightH] = useState("h-full");
   const [darkH, setDarkH] = useState("h-full");
-  const [down, setDown] = useState("hidden");
-
-  const handleScroll = () => {
-    setScrollPosition(window.scrollY);
-  };
 
   useEffect(() => {
     setTimeout(() => {
       setLightH("h-0");
     }, 400);
     setDarkH("h-0");
-
-    setTimeout(() => {
-      setDown("gif");
-      setTimeout(() => {
-        setDown("png");
-      }, 490);
-    }, 2000);
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
@@ -51,26 +33,10 @@ export default function Page() {
           <Navbar />
         </div>
 
-        {/* Home */}
-        <div className="h-[100vh] w-screen bg-slate-100">
-          <Tv />
-          <img
-            className="absolute translate-y-142 -translate-x-2 mx-auto left-0 right-0 bottom-0 scale-[0.3]"
-            src={
-              down === "hidden"
-                ? ""
-                : down === "gif"
-                ? "/down.gif"
-                : "/down.png"
-            }
-            alt=""
-            style={{
-              opacity: Math.max(0, 1 - scrollPosition / 500),
-            }}
-          />
-        </div>
+        <Home />
 
-        {/* Projects */}
+        <Projects />
+
         <div className="h-[150vh]"></div>
       </main>
     </>

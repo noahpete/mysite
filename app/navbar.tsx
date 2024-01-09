@@ -3,29 +3,49 @@ import React, { useEffect, useState } from "react";
 
 const Navbar: React.FC<NavbarProps> = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [randomNum, setRandomNum] = useState(1);
   const [curPage, setCurPage] = useState("home");
-  const [homePlaying, setHomePlaying] = useState(false);
-  const [projPlaying, setProjPlaying] = useState(false);
-  const [aboutPlaying, setAboutPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
   };
 
-  const handleLinkClick = (link: string) => {
-    let func: ((arg0: boolean) => void) | null = null;
-    if (link === "home" && curPage !== "home") func = setHomePlaying;
-    // if (link === "home") func = setHomePlaying;
-    if (link === "proj" && curPage !== "proj") func = setProjPlaying;
-    if (link === "about" && curPage !== "about") func = setAboutPlaying;
-    console.log(curPage, link);
-    if (!func) return;
-    func(true);
-    setTimeout(() => {
-      func(false);
-    }, 750);
+  const renderLink = (pageName: string, href: string) => {
+    let num = 1;
+    if (pageName === "projects") num = 5;
+    if (pageName === "about") num = 6;
+    const gif = `/underline${num}.gif`;
+    const png = `/underline${num}.png`;
+
+    return (
+      <Link
+        className="mr-5 relative"
+        onClick={() => {
+          setCurPage(pageName);
+          setIsPlaying(true);
+        }}
+        href={href}
+      >
+        <img
+          className={`absolute top-0 left-0 scale-[2.2] translate-y-[4px] scale-y-150 -z-10 ${
+            curPage === pageName ? "" : "hidden"
+          }`}
+          src={isPlaying ? gif : png}
+          alt=""
+        />
+        {`${pageName[0].toUpperCase()}${pageName.substring(1)}`}
+      </Link>
+    );
   };
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsPlaying(false);
+    }, 750);
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isPlaying]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -50,75 +70,9 @@ const Navbar: React.FC<NavbarProps> = () => {
           </Link>
         </div>
         <div className="mx-auto md:mr-0 md:ml-auto max-w-sm relative">
-          <Link
-            className="mr-8 relative"
-            onClick={() => {
-              if (curPage !== "home")
-                setRandomNum(Math.floor(Math.random() * 6) + 1);
-              setCurPage("home");
-              handleLinkClick("home");
-            }}
-            href="/"
-          >
-            <img
-              className={`absolute top-0 left-0 scale-[2.2] translate-y-[6px] scale-y-150 -z-10 ${
-                curPage === "home" ? "" : "hidden"
-              }`}
-              src={
-                homePlaying
-                  ? `/underline${randomNum}.gif`
-                  : `/underline${randomNum}.png`
-              }
-              alt=""
-            />
-            Home
-          </Link>
-          <Link
-            className="mr-8 relative"
-            onClick={() => {
-              if (curPage !== "proj")
-                setRandomNum(Math.floor(Math.random() * 6) + 1);
-              setCurPage("proj");
-              handleLinkClick("proj");
-            }}
-            href="/"
-          >
-            <img
-              className={`absolute top-0 left-0 scale-[2.2] translate-y-[3px] scale-y-150 -z-10 ${
-                curPage === "proj" ? "" : "hidden"
-              }`}
-              src={
-                projPlaying
-                  ? `/underline${randomNum}.gif`
-                  : `/underline${randomNum}.png`
-              }
-              alt=""
-            />
-            Projects
-          </Link>
-          <Link
-            className="mr-8 relative"
-            onClick={() => {
-              if (curPage !== "about")
-                setRandomNum(Math.floor(Math.random() * 6) + 1);
-              setCurPage("about");
-              handleLinkClick("about");
-            }}
-            href="/about"
-          >
-            <img
-              className={`absolute top-0 left-0 scale-[2.2] translate-y-[6px] scale-y-150 -z-10 ${
-                curPage === "about" ? "" : "hidden"
-              }`}
-              src={
-                aboutPlaying
-                  ? `/underline${randomNum}.gif`
-                  : `/underline${randomNum}.png`
-              }
-              alt=""
-            />
-            About
-          </Link>
+          {renderLink("home", "/#home")}
+          {renderLink("projects", "/#projects")}
+          {renderLink("about", "/")}
         </div>
       </div>
     </>
