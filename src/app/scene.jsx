@@ -1,21 +1,11 @@
 import React, { Suspense, useEffect, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  ContactShadows,
-  Environment,
-  Html,
-  useProgress,
-} from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { ContactShadows, Environment, Html } from "@react-three/drei";
 import CircularProgress from "@mui/material/CircularProgress";
 import MinimalDefault from "./models/minimal_default";
 
 export default function Scene() {
-  const medium = {
-    canvasWidth: "min-w-[70vw]",
-  };
-
   const Loader = () => {
-    const { progress } = useProgress();
     return (
       <Html center>
         <CircularProgress color="inherit" />
@@ -24,7 +14,7 @@ export default function Scene() {
   };
 
   return (
-    <div className="row-span-1 row-start-1 mt-4 aspect-square md:col-span-2 md:col-start-1 md:ml-64 md:mt-0">
+    <div className="row-span-1 row-start-1 mt-4 aspect-square md:col-span-2 md:col-start-1 md:ml-64 md:-mt-24 xl:-mt-48">
       <Canvas
         className="z-0"
         shadows

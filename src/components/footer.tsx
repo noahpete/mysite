@@ -5,7 +5,7 @@ import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <div className="mx-auto p-8 max-w-[1000px] h-[24vh] translate-y-64 flex-col sm:flex-row flex justify-between items-center gap-6 py-8">
+    <div className="mt-16 mx-auto px-8 h-[24vh] flex-col sm:flex-row flex gap-y-4 sm:justify-between items-center">
       {/* Noah Peters, © DATE */}
       <div className="flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
         <Link

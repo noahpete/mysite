@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import Scene from "./scene";
+import { useEffect } from "react";
+import Bounded from "@/components/bounded";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Scene from "./scene";
+import Image from "next/image";
+import gsap from "gsap";
 
 export default function Home() {
-  const comp = useRef(null);
-
   useEffect(() => {
     const tl = gsap.timeline({ delay: 1 });
 
@@ -29,7 +28,6 @@ export default function Home() {
 
     return () => tl.kill();
   }, []);
-
   const renderLetters = (name: string, key: string) => {
     if (!name) return;
 
@@ -41,22 +39,14 @@ export default function Home() {
   };
 
   return (
-    <main className="">
-      <Header />
-      <div className="grid mx-auto max-w-[500px] md:max-w-[800px] h-[50vh] md:-mt-12 grid-cols-1 md:grid-cols-2 items-center">
+    <main>
+      <Bounded>
         <Scene />
-        <div className="col-start-1 md:row-start-1">
-          <h1
-            className="text-8xl md:text-[107px] font-bold ml-8 -mt-24 md:mt-48"
-            aria-label="Noah Peters"
-            ref={comp}
-          >
-            <span className="block">{renderLetters("Noah", "first")}</span>
-            <span className="block">{renderLetters("Peters", "last")}</span>
-          </h1>
-        </div>
-      </div>
-      <Footer />
+        <h1 className="text-[clamp(3rem,20vmin,20rem)] leading-none tracking-tighter font-extrabold ml-4 -mt-8 md:ml-8 md:-mt-52 xl:ml-32 xl:-mt-64">
+          <span className="block">{renderLetters("Noah", "first")}</span>
+          <span className="block">{renderLetters("Peters", "last")}</span>
+        </h1>
+      </Bounded>
     </main>
   );
 }

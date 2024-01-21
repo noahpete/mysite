@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: #ffffff;
+  --secondary: #000000;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 255, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  background-color: var(--primary);
+}
+
+p,
+li {
+  font-size: small;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  font-size: large;
+}
+
+#card {
+  background-color: var(--primary);
+  border-color: var(--secondary);
+  border-width: 1px;
+  margin: 0.5em;
+  padding: 1em;
+}
