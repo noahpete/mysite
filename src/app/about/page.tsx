@@ -76,28 +76,23 @@ export default function About() {
                 <li>Mini-CPU assembler, simulator, and assembly multiplier</li>
                 <li>Pipelined datapath and memory cache simulators</li>
                 <li>Assembly-level optimization</li>
+                <li>ARM assembly</li>
               </div>
 
               <div className="mt-4">
                 <h2>Machine Learning</h2>
                 <li>
                   Applications in data mining, computer vision, speech
-                  recognition
+                  recognition, and natural language processing
                 </li>
-                <li>
-                  Support vector machines, convolutional neural networks,
-                  clustering
-                </li>
+                <li>SVMs, convolutional neural networks, clustering</li>
                 <li>Information theory</li>
               </div>
 
               <div className="mt-4">
                 <h2>Computer Security</h2>
                 <li>Cryptography theory: AES, Diffie-Hellman, RSA</li>
-                <li>
-                  Web security: XSS, CSRF, SQLi, UDP/TCP forensics, and DNS
-                  attacks
-                </li>
+                <li>Web security: XSS, CSRF, SQLi, TLS, DNS attacks</li>
                 <li>
                   Host and app security: buffer overflow, viruses, spyware,
                   botnets, digital forensics
