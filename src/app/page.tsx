@@ -47,7 +47,7 @@ export default function Home() {
         <Scene />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="text-8xl md:text-[107px] font-bold ml-4 -mt-24 md:mt-48"
+            className="text-8xl md:text-[107px] font-bold ml-8 -mt-24 md:mt-48"
             aria-label="Noah Peters"
             ref={comp}
           >

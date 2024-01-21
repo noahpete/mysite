@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
     <nav aria-label="Main navigation">
-      <ul className="flex flex-col px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl">
+      <ul className="flex flex-col md:flex-row max-w-[800px] px-4 py-2 border-[1px] border-black ml-4  mt-2 md:ml-12">
         {/* Common elts */}
         <div className="flex items-center justify-between">
           <div className="hidden md:flex">
@@ -48,7 +48,7 @@ export default function NavBar() {
         {/* Mobile menu */}
         <div
           className={clsx(
-            "fixed bottom-0 left-0 right-0 max-w-[240px] mr-0 ml-auto top-0 z-50 flex flex-col items-end gap-4 bg-slate-50 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden",
+            "fixed bottom-0 left-0 mt-2 mb-2 right-0 max-w-[240px] mr-0 ml-auto top-0 z-50 flex flex-col items-end gap-4 bg-white border-[1px] border-black pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden",
             open ? "translate-x-0" : "translate-x-[100%]"
           )}
         >
@@ -64,12 +64,12 @@ export default function NavBar() {
                 <Link
                   href={link}
                   className={clsx(
-                    "group relative block overflow-hidden rounded mr-12 ml-auto px-3 text-3xl font-bold"
+                    "group relative block overflow-hidden mr-12 ml-auto px-3 text-3xl font-bold"
                   )}
                 >
                   <span
                     className={clsx(
-                      "absolute inset-0 z-0 h-full translate-y-12 rounded bg-slate-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
+                      "absolute inset-0 z-0 h-full translate-y-12 bg-black transition-transform duration-300 ease-in-out",
                       pathname === link ? "translate-y-8" : "translate-y-24"
                     )}
                   />
@@ -111,15 +111,19 @@ function DesktopMenu({ pathname }: { pathname: string }) {
                 "group relative block overflow-hidden px-2 py-1 text-base font-bold"
               )}
             >
+              {/* Underline */}
               <span
                 className={clsx(
-                  "absolute inset-0 z-0 h-full bg-black max-w-16 transition-transform duration-300 ease-in-out",
+                  "absolute inset-0 z-0 h-full bg-black max-w-[80px] transition-transform duration-300 ease-in-out",
                   pathname === link ? "translate-y-[30px]" : "translate-y-24"
                 )}
               />
+
               <span className="relative">{label}</span>
             </Link>
           </li>
+
+          {/* Dividers */}
           {index < LINKS.length - 1 && (
             <span
               className="hidden text-xl font-thin leading-[0] md:inline"

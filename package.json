@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.5",
     "@mui/material-next": "^6.0.0-alpha.118",
+    "@nextui-org/react": "^2.2.9",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.14",
     "@types/three": "^0.160.0",
