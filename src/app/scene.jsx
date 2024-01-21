@@ -24,9 +24,9 @@ export default function Scene() {
   };
 
   return (
-    <div className="row-span-1 row-start-1 mt-4 aspect-square md:col-span-1 md:col-start-2 md:mt-0">
+    <div className="row-span-1 row-start-1 mt-4 aspect-square md:col-span-2 md:col-start-1 md:ml-64 md:mt-0">
       <Canvas
-        className="z-0 md:-ml-52 min-w-[70vw]"
+        className="z-0"
         shadows
         gl={{ antialias: true }}
         dpr={[1, 1.5]}
@@ -36,8 +36,8 @@ export default function Scene() {
           <MinimalDefault scale={0.3} position={[0, -0.5, 0]} />
           <ContactShadows
             position={[0, -0.6, 0]}
-            opacity={0.8}
-            scale={30}
+            opacity={0.6}
+            scale={10}
             blur={0.8}
             far={9}
           />

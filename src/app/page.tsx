@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Scene from "./scene";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const comp = useRef(null);
@@ -31,19 +33,21 @@ export default function Home() {
   const renderLetters = (name: string, key: string) => {
     if (!name) return;
 
-    return name
-      .split("")
-      .map((letter, index) => (
-        <span className="name-animation inline-block">{letter}</span>
-      ));
+    return name.split("").map((letter, index) => (
+      <span key={key + index} className="name-animation inline-block">
+        {letter}
+      </span>
+    ));
   };
+
   return (
     <main className="">
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <Header />
+      <div className="grid mx-auto max-w-[500px] md:max-w-[800px] h-[50vh] md:-mt-12 grid-cols-1 md:grid-cols-2 items-center">
         <Scene />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="text-8xl font-bold ml-4 -mt-12"
+            className="text-8xl md:text-[107px] font-bold ml-4 -mt-24 md:mt-48"
             aria-label="Noah Peters"
             ref={comp}
           >
@@ -52,6 +56,7 @@ export default function Home() {
           </h1>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
