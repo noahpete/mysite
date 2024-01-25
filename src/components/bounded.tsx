@@ -12,13 +12,20 @@ type BoundedProps = {
 const Bounded = React.forwardRef<HTMLDivElement, BoundedProps>(
   ({ as: Comp = "section", className, children, ...restProps }, ref) => {
     return (
-      <React.Fragment>
-        <Comp ref={ref} className={clsx("md:p-8", className)} {...restProps}>
+      <div className="h-[100vh] relative">
+        <Comp
+          ref={ref}
+          className={clsx(
+            "md:p-8 min-h-[95vh] mx-auto max-w-[1200px]",
+            className
+          )}
+          {...restProps}
+        >
           <Header />
           {children}
-          <Footer />
         </Comp>
-      </React.Fragment>
+        <Footer />
+      </div>
     );
   }
 );

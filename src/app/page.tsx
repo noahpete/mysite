@@ -1,9 +1,10 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect } from "react";
 import Bounded from "@/components/bounded";
 import Header from "@/components/header";
-import Scene from "./scene";
+import Scene from "@/components/scene";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -41,11 +42,13 @@ export default function Home() {
   return (
     <main>
       <Bounded>
-        <Scene />
-        <h1 className="text-[clamp(3rem,20vmin,20rem)] leading-none tracking-tighter font-extrabold ml-4 -mt-8 md:ml-8 md:-mt-52 xl:ml-32 xl:-mt-64">
-          <span className="block">{renderLetters("Noah", "first")}</span>
-          <span className="block">{renderLetters("Peters", "last")}</span>
-        </h1>
+        <div>
+          <Scene />
+          <h1 className="text-[clamp(3rem,20vmin,14rem)] leading-none tracking-tighter font-extrabold ml-4 -mt-8 md:ml-8 md:-mt-52 xl:ml-32 xl:-mt-64">
+            <span className="block">{renderLetters("Noah", "first")}</span>
+            <span className="block">{renderLetters("Peters", "last")}</span>
+          </h1>
+        </div>
       </Bounded>
     </main>
   );

@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Environment, Html } from "@react-three/drei";
 import CircularProgress from "@mui/material/CircularProgress";
-import MinimalDefault from "./models/minimal_default";
+import MinimalDefault from "@/components/minimal_default";
 
 export default function Scene() {
   const Loader = () => {
