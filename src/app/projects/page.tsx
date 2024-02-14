@@ -86,6 +86,7 @@ export default function Projects() {
                 src={"/p1_examples.gif"}
                 width={400}
                 height={100}
+                alt="Unreal demonstration"
               />
             </div>
             A project exercising my abilities in Unreal Engine, specifically
