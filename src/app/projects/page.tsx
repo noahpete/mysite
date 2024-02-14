@@ -90,8 +90,8 @@ export default function Projects() {
               />
             </div>
             A project exercising my abilities in Unreal Engine, specifically
-            implementing features for a VR experience. The scene is an artist's
-            rendition of a computer lab located in the University of Michigan's
+            implementing features for a VR experience. The scene is an artist&apos;s
+            rendition of a computer lab located in the University of Michigan&apos;s
             Bob and Betty Beyster Building. This was a project for the course 
             Extended Reality and Society, and it required us to utilize a 
             variety of features Unreal Engine offers.
@@ -108,7 +108,7 @@ export default function Projects() {
             We were then tasked with planning and implementing a custom feature
             of our own design. I implemented a custom menu in which the user is
             prompted with two choices: to either pay for their downloadable music
-            or to attempt to pirate the music. The player's decision determines
+            or to attempt to pirate the music. The player&apos;s decision determines
             their fate.
           </AccordionDetails>
         </Accordion>
