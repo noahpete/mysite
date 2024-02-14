@@ -14,7 +14,7 @@ export default function Scene() {
   };
 
   return (
-    <div className="row-span-1 row-start-1 mt-4 aspect-square md:col-span-2 md:col-start-1 md:ml-64 md:-mt-24 xl:-mt-48">
+    <div className="row-span-1 sm:ml-32 row-start-1 mt-4 aspect-square md:col-span-2 md:col-start-1 md:ml-64 md:-mt-24 lg:-mt-48">
       <Canvas
         className="z-0"
         shadows

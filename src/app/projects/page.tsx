@@ -8,6 +8,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
+import Image from "next/image";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
 
 export default function Projects() {
@@ -67,6 +68,47 @@ export default function Projects() {
             results being delievered via an API implemented using Django REST
             framework. The web app was previously deployed on an AWS EC2
             instance, while AWS S3 was used for storage.
+          </AccordionDetails>
+        </Accordion>
+
+        {/* Unreal VR Scene */}
+        <Accordion id="card" style={{ borderRadius: "0%" }}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
+          >
+            <h1>Unreal Exercise</h1>: A demonstration of a variety of Unreal functions.
+            (Unreal Engine)
+            <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
+          </AccordionSummary>
+          <AccordionDetails>
+            <div className="float-left m-4">
+              <Image
+                src={"/p1_examples.gif"}
+                width={400}
+                height={100}
+              />
+            </div>
+            A project exercising my abilities in Unreal Engine, specifically
+            implementing features for a VR experience. The scene is an artist's
+            rendition of a computer lab located in the University of Michigan's
+            Bob and Betty Beyster Building. This was a project for the course 
+            Extended Reality and Society, and it required us to utilize a 
+            variety of features Unreal Engine offers.
+            <br></br>
+            <br></br>
+            Some of the tasks included basic engine usage such as custom textures
+            and materials, modeling, and library usage. Features gradually grew
+            in complexity, as I then implemented interactive props, lighting, 
+            and NPCs that react to player actions. More advanced features such
+            as particle systems, post processing effects, custom controller events,
+            widgets, and global lighting effects were also explored.
+            <br></br>
+            <br></br>
+            We were then tasked with planning and implementing a custom feature
+            of our own design. I implemented a custom menu in which the user is
+            prompted with two choices: to either pay for their downloadable music
+            or to attempt to pirate the music. The player's decision determines
+            their fate.
           </AccordionDetails>
         </Accordion>
 

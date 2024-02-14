@@ -44,7 +44,7 @@ export default function Home() {
       <Bounded>
         <div>
           <Scene />
-          <h1 className="text-[clamp(3rem,20vmin,14rem)] leading-none tracking-tighter font-extrabold ml-4 -mt-8 md:ml-8 md:-mt-52 xl:ml-32 xl:-mt-64">
+          <h1 className="text-[clamp(3rem,20vmin,14rem)] leading-none tracking-tighter font-extrabold ml-4 sm:-mt-[20vh] md:ml-8 md:-mt-52 xl:ml-32 xl:-mt-64">
             <span className="block">{renderLetters("Noah", "first")}</span>
             <span className="block">{renderLetters("Peters", "last")}</span>
           </h1>
