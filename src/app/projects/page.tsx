@@ -94,11 +94,12 @@ export default function Projects() {
             rendition of a computer lab located in the University of Michigan&apos;s
             Bob and Betty Beyster Building. This was a project for the course 
             Extended Reality and Society, and it required us to utilize a 
-            variety of features Unreal Engine offers.
+            variety of features Unreal Engine offers. Further, we were tasked with
+            using Jira for project management.
             <br></br>
             <br></br>
             Some of the tasks included basic engine usage such as custom textures
-            and materials, modeling, and library usage. Features gradually grew
+            and materials, modeling, blueprints, and library usage. Features gradually grew
             in complexity, as I then implemented interactive props, lighting, 
             and NPCs that react to player actions. More advanced features such
             as particle systems, post processing effects, custom controller events,
