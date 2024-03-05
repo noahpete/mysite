@@ -15,6 +15,27 @@ export default function Projects() {
   return (
     <main className="">
       <Bounded>
+        {/* Game Engine */}
+        <Accordion id="card">
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
+          >
+            <h1>Game Engine</h1>: Low-level custom game engine (C++, SDL, Lua)
+            <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
+          </AccordionSummary>
+          <AccordionDetails>
+            A custom game engine designed with modularity and feature expansion in mind. The entirety
+            of the engine itself is written in C++, utilizing libraries such as glm and rapidjson.
+            Additionally, SDL was used to render graphics and mix audio. The engine builds for Windows,
+            Mac, and Linux.
+            <br></br>
+            <br></br>
+            Furthermore, a full integration of the Lua language allows users to write and implement their
+            own scripts for the engine to run during gametime. This permits a feature-rich component-based
+            scripting system.
+          </AccordionDetails>
+        </Accordion>
+
         {/* MySite */}
         <Accordion id="card">
           <AccordionSummary
@@ -146,18 +167,7 @@ export default function Projects() {
           </AccordionDetails>
         </Accordion>
 
-        {/* Game Engine */}
-        <Accordion id="card">
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
-          >
-            <h1>Game Engine</h1>: Low-level custom game engine (C++)
-            <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
-          </AccordionSummary>
-          <AccordionDetails>
-            My current project&#8212;more details soon!
-          </AccordionDetails>
-        </Accordion>
+        
       </Bounded>
     </main>
   );
