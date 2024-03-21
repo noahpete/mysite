@@ -135,6 +135,38 @@ export default function Projects() {
           </AccordionDetails>
         </Accordion>
 
+        {/* Unity */}
+        <Accordion id="card" style={{ borderRadius: "0%" }}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
+          >
+            <h1>A2 Go</h1>: A Unity AR project akin to Pokemon Go.
+            (Unity)
+            <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
+          </AccordionSummary>
+          <AccordionDetails>
+            <div className="float-left m-4">
+              <Image
+                src={"/p2_examples.gif"}
+                width={400}
+                height={100}
+                alt="Unity demonstration"
+              />
+            </div>
+            A2 Go! is an augmented reality mobile game that gets players out exploring the city of Ann Arbor.
+            Like Pokemon Go, it blends real-world geography with virtual gameplay elements. Players traverse
+            an overhead map view to navigate the city streets, with the goal of planting virtual seeds at
+            real-world locations using AR camera views. This was all accomplished using Mapbox and Unity&apos;s XR
+            toolkit.
+            <br></br>
+            <br></br>
+            While sharing the real-world exploration premise of Pokemon Go, A2 Go! has its own distinct setting,
+            characters, and resource collection systems centered around botany and urban forestry rather than
+            catching creatures. But like its inspirational predecessor, it aims to get players physically moving
+            about their surroundings in an engaging blend of reality and fantasy.
+          </AccordionDetails>
+        </Accordion>
+
         {/* Assembler */}
         <Accordion id="card">
           <AccordionSummary
