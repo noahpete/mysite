@@ -121,14 +121,14 @@ export default function Projects() {
             lung volume, less mundane and more engaging--with the hopes that greater
             engagement may yield stronger results. The application utilizes an external
             custom-made spirometry sensor to detect air flow, which is then correlated
-            to the user's lung volume. As the user blows harder--and with proper breathing
+            to the user&apos;s lung volume. As the user blows harder--and with proper breathing
             rhythm--various interactions occur in the app.
             <br></br>
             <br></br>
             The technical highlight of the assignment was definitely the custom spirometer,
             but a decent amount of work also went into application development as well. For
-            the application, we used Unity's VR package to create a suite of minigames that
-            make the spirometry measurement experience more enjoyable. Further, Unity's wide
+            the application, we used Unity&apos;s VR package to create a suite of minigames that
+            make the spirometry measurement experience more enjoyable. Further, Unity&apos;s wide
             array of plugins permitted us to find one that allowed for seamless communication
             with the spirometry sensor.
           </AccordionDetails>
