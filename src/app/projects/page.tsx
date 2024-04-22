@@ -9,7 +9,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
 import Image from "next/image";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 export default function Projects() {
   return (
@@ -20,9 +20,17 @@ export default function Projects() {
           <AccordionSummary
             expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
           >
-            <h1>Game Engine</h1>: Low-level custom game engine (C++, SDL, Lua)
+            <h1>Game Engine</h1>: Low-level custom game engine (C++, SDL, Lua, LuaBridge, GLM, Box2D, ImGui)
             <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
           </AccordionSummary>
+          <div className="float-left m-4">
+              <Image
+                src={"/gedemo.gif"}
+                width={400}
+                height={100}
+                alt="Unity Spiro VR demonstration"
+              />
+            </div>
           <AccordionDetails>
             A custom game engine designed with modularity and feature expansion in mind. The entirety
             of the engine itself is written in C++, utilizing libraries such as glm and rapidjson.
@@ -89,6 +97,40 @@ export default function Projects() {
             results being delievered via an API implemented using Django REST
             framework. The web app was previously deployed on an AWS EC2
             instance, while AWS S3 was used for storage.
+          </AccordionDetails>
+        </Accordion>
+
+        {/* SpiroVR */}
+        <Accordion id="card" style={{ borderRadius: "0%" }}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
+          >
+            <h1>SpiroVR</h1>: A VR spirometry test suite (Unity)
+            <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
+          </AccordionSummary>
+          <AccordionDetails>
+            <div className="float-left m-4">
+              <Image
+                src={"/spiro.gif"}
+                width={400}
+                height={100}
+                alt="Unity Spiro VR demonstration"
+              />
+            </div>
+            This project aims to make spirometry tests, a medical procedure for measuring
+            lung volume, less mundane and more engaging--with the hopes that greater
+            engagement may yield stronger results. The application utilizes an external
+            custom-made spirometry sensor to detect air flow, which is then correlated
+            to the user's lung volume. As the user blows harder--and with proper breathing
+            rhythm--various interactions occur in the app.
+            <br></br>
+            <br></br>
+            The technical highlight of the assignment was definitely the custom spirometer,
+            but a decent amount of work also went into application development as well. For
+            the application, we used Unity's VR package to create a suite of minigames that
+            make the spirometry measurement experience more enjoyable. Further, Unity's wide
+            array of plugins permitted us to find one that allowed for seamless communication
+            with the spirometry sensor.
           </AccordionDetails>
         </Accordion>
 
