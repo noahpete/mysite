@@ -20,27 +20,35 @@ export default function Projects() {
           <AccordionSummary
             expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
           >
-            <h1>Game Engine</h1>: Low-level custom game engine (C++, SDL, Lua, LuaBridge, GLM, Box2D, ImGui)
-            <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
+            <h1>Game Engine</h1>: Low-level custom game engine (C++, SDL, Lua,
+            LuaBridge, GLM, Box2D, ImGui)
+            <Link
+              href="https://github.com/noahpete/game_engine"
+              className="mr-4 ml-auto text-2xl transition-all duration-150 hover:scale-125"
+            >
+              <FaGithub />
+            </Link>
           </AccordionSummary>
           <div className="float-left m-4">
-              <Image
-                src={"/gedemo.gif"}
-                width={400}
-                height={100}
-                alt="Unity Spiro VR demonstration"
-              />
-            </div>
+            <Image
+              src={"/gedemo.gif"}
+              width={400}
+              height={100}
+              alt="Game engine demo"
+            />
+          </div>
           <AccordionDetails>
-            A custom game engine designed with modularity and feature expansion in mind. The entirety
-            of the engine itself is written in C++, utilizing libraries such as glm and rapidjson.
-            Additionally, SDL was used to render graphics and mix audio. The engine builds for Windows,
-            Mac, and Linux.
+            A custom game engine designed with modularity and feature expansion
+            in mind. The entirety of the engine itself is written in C++,
+            utilizing libraries such as glm and rapidjson. Additionally, SDL was
+            used to render graphics and mix audio. The engine builds for
+            Windows, Mac, and Linux.
             <br></br>
             <br></br>
-            Furthermore, a full integration of the Lua language allows users to write and implement their
-            own scripts for the engine to run during gametime. This permits a feature-rich component-based
-            scripting system.
+            Furthermore, a full integration of the Lua language allows users to
+            write and implement their own scripts for the engine to run during
+            gametime. This permits a feature-rich component-based scripting
+            system.
           </AccordionDetails>
         </Accordion>
 
@@ -117,20 +125,22 @@ export default function Projects() {
                 alt="Unity Spiro VR demonstration"
               />
             </div>
-            This project aims to make spirometry tests, a medical procedure for measuring
-            lung volume, less mundane and more engaging--with the hopes that greater
-            engagement may yield stronger results. The application utilizes an external
-            custom-made spirometry sensor to detect air flow, which is then correlated
-            to the user&apos;s lung volume. As the user blows harder--and with proper breathing
+            This project aims to make spirometry tests, a medical procedure for
+            measuring lung volume, less mundane and more engaging--with the
+            hopes that greater engagement may yield stronger results. The
+            application utilizes an external custom-made spirometry sensor to
+            detect air flow, which is then correlated to the user&apos;s lung
+            volume. As the user blows harder--and with proper breathing
             rhythm--various interactions occur in the app.
             <br></br>
             <br></br>
-            The technical highlight of the assignment was definitely the custom spirometer,
-            but a decent amount of work also went into application development as well. For
-            the application, we used Unity&apos;s VR package to create a suite of minigames that
-            make the spirometry measurement experience more enjoyable. Further, Unity&apos;s wide
-            array of plugins permitted us to find one that allowed for seamless communication
-            with the spirometry sensor.
+            The technical highlight of the assignment was definitely the custom
+            spirometer, but a decent amount of work also went into application
+            development as well. For the application, we used Unity&apos;s VR
+            package to create a suite of minigames that make the spirometry
+            measurement experience more enjoyable. Further, Unity&apos;s wide
+            array of plugins permitted us to find one that allowed for seamless
+            communication with the spirometry sensor.
           </AccordionDetails>
         </Accordion>
 
@@ -139,8 +149,8 @@ export default function Projects() {
           <AccordionSummary
             expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
           >
-            <h1>Unreal Exercise</h1>: A demonstration of a variety of Unreal functions.
-            (Unreal Engine)
+            <h1>Unreal Exercise</h1>: A demonstration of a variety of Unreal
+            functions. (Unreal Engine)
             <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
           </AccordionSummary>
           <AccordionDetails>
@@ -153,27 +163,28 @@ export default function Projects() {
               />
             </div>
             A project exercising my abilities in Unreal Engine, specifically
-            implementing features for a VR experience. The scene is an artist&apos;s
-            rendition of a computer lab located in the University of Michigan&apos;s
-            Bob and Betty Beyster Building. This was a project for the course 
-            Extended Reality and Society, and it required us to utilize a 
-            variety of features Unreal Engine offers. Further, we were tasked with
-            using Jira for project management.
+            implementing features for a VR experience. The scene is an
+            artist&apos;s rendition of a computer lab located in the University
+            of Michigan&apos;s Bob and Betty Beyster Building. This was a
+            project for the course Extended Reality and Society, and it required
+            us to utilize a variety of features Unreal Engine offers. Further,
+            we were tasked with using Jira for project management.
             <br></br>
             <br></br>
-            Some of the tasks included basic engine usage such as custom textures
-            and materials, modeling, blueprints, and library usage. Features gradually grew
-            in complexity, as I then implemented interactive props, lighting, 
-            and NPCs that react to player actions. More advanced features such
-            as particle systems, post processing effects, custom controller events,
-            widgets, and global lighting effects were also explored.
+            Some of the tasks included basic engine usage such as custom
+            textures and materials, modeling, blueprints, and library usage.
+            Features gradually grew in complexity, as I then implemented
+            interactive props, lighting, and NPCs that react to player actions.
+            More advanced features such as particle systems, post processing
+            effects, custom controller events, widgets, and global lighting
+            effects were also explored.
             <br></br>
             <br></br>
             We were then tasked with planning and implementing a custom feature
             of our own design. I implemented a custom menu in which the user is
-            prompted with two choices: to either pay for their downloadable music
-            or to attempt to pirate the music. The player&apos;s decision determines
-            their fate.
+            prompted with two choices: to either pay for their downloadable
+            music or to attempt to pirate the music. The player&apos;s decision
+            determines their fate.
           </AccordionDetails>
         </Accordion>
 
@@ -182,8 +193,7 @@ export default function Projects() {
           <AccordionSummary
             expandIcon={<ExpandMoreIcon style={{ color: "black" }} />}
           >
-            <h1>A2 Go</h1>: A Unity AR project akin to Pokemon Go.
-            (Unity)
+            <h1>A2 Go</h1>: A Unity AR project akin to Pokemon Go. (Unity)
             <FaGithub className="mr-4 ml-auto text-2xl transition-all duration-150 text-gray-400 cursor-default" />
           </AccordionSummary>
           <AccordionDetails>
@@ -195,17 +205,21 @@ export default function Projects() {
                 alt="Unity demonstration"
               />
             </div>
-            A2 Go! is an augmented reality mobile game that gets players out exploring the city of Ann Arbor.
-            Like Pokemon Go, it blends real-world geography with virtual gameplay elements. Players traverse
-            an overhead map view to navigate the city streets, with the goal of planting virtual seeds at
-            real-world locations using AR camera views. This was all accomplished using Mapbox and Unity&apos;s XR
-            toolkit.
+            A2 Go! is an augmented reality mobile game that gets players out
+            exploring the city of Ann Arbor. Like Pokemon Go, it blends
+            real-world geography with virtual gameplay elements. Players
+            traverse an overhead map view to navigate the city streets, with the
+            goal of planting virtual seeds at real-world locations using AR
+            camera views. This was all accomplished using Mapbox and
+            Unity&apos;s XR toolkit.
             <br></br>
             <br></br>
-            While sharing the real-world exploration premise of Pokemon Go, A2 Go! has its own distinct setting,
-            characters, and resource collection systems centered around botany and urban forestry rather than
-            catching creatures. But like its inspirational predecessor, it aims to get players physically moving
-            about their surroundings in an engaging blend of reality and fantasy.
+            While sharing the real-world exploration premise of Pokemon Go, A2
+            Go! has its own distinct setting, characters, and resource
+            collection systems centered around botany and urban forestry rather
+            than catching creatures. But like its inspirational predecessor, it
+            aims to get players physically moving about their surroundings in an
+            engaging blend of reality and fantasy.
           </AccordionDetails>
         </Accordion>
 
@@ -240,8 +254,6 @@ export default function Projects() {
             My current project&#8212;more details soon!
           </AccordionDetails>
         </Accordion>
-
-        
       </Bounded>
     </main>
   );
