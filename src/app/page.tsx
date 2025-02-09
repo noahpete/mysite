@@ -45,7 +45,7 @@ export default function Home() {
 				<div className="flex w-full">
 					<ProjectCard
 						title="<Bingo Game>"
-						githubLink=""
+						githubLink="https://github.com/noahpete/bingo"
 						description="Current project! Inspired by Buckshot Roulette and other recent table-top games, this Godot game takes bingo to another level."
 					/>
 					<ProjectCard
