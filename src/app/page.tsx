@@ -32,10 +32,10 @@ export default function Home() {
 					className="float-left mr-4 mb-2 rounded-sm"
 				/>
 				<p>
-					Hi, my name is Noah—thanks for checking out my site! I'm a recent graduate from
-					the University of Michigan with an interest in performant systems, games and
-					game engines, machine learning, and visual effects. Outside of programming, I
-					enjoy exploring math, playing bass, watching movies, and playing with my dog!
+					Hi, my name is Noah—thanks for checking out my site! I&#039;m a recent graduate
+					from the University of Michigan with an interest in performant systems, games
+					and game engines, machine learning, and visual effects. Outside of programming,
+					I enjoy exploring math, playing bass, watching movies, and playing with my dog!
 				</p>
 			</Card>
 
