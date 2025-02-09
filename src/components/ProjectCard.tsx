@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 type Props = {
 	title: string;
-	link: Url;
+	githubLink: Url;
 	description: string;
 	className?: string;
 };
@@ -15,7 +15,7 @@ type Props = {
 export default function ProjectCard({
 	children,
 	title,
-	link,
+	githubLink,
 	description,
 	className,
 }: Props & { children?: React.ReactNode }) {
@@ -23,8 +23,8 @@ export default function ProjectCard({
 		<Card className={cn("w-[49%]", className)}>
 			<div className="flex">
 				<h1 className="text-lg font-bold">{title}</h1>
-				{link && (
-					<Link href={link} className="ml-auto mt-2">
+				{githubLink && (
+					<Link href={githubLink} className="ml-auto mt-2">
 						<FaGithub className="text-gray-400 hover:text-black" />
 					</Link>
 				)}

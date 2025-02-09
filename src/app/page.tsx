@@ -13,13 +13,13 @@ export default function Home() {
 				<div className="mb-2 flex">
 					<h1 className="text-2xl font-extrabold">Noah Peters</h1>
 					<div className="flex ml-auto text-2xl gap-x-2 mt-2 text-gray-400">
-						<Link href="">
+						<Link href="nope@umich.edu">
 							<MdEmail className="hover:text-black" />
 						</Link>
-						<Link href="">
+						<Link href="https://github.com/noahpete">
 							<FaGithub className="hover:text-black" />
 						</Link>
-						<Link href="">
+						<Link href="https://www.linkedin.com/in/noah-f-peters/">
 							<FaLinkedin className="hover:text-black" />
 						</Link>
 					</div>
@@ -45,27 +45,35 @@ export default function Home() {
 				<div className="flex w-full">
 					<ProjectCard
 						title="<Bingo Game>"
-						link=""
+						githubLink=""
 						description="Current project! Inspired by Buckshot Roulette and other recent table-top games, this Godot game takes bingo to another level."
 					/>
 					<ProjectCard
 						className="ml-auto"
 						title="Game Engine"
-						link=""
-						description="An ongoing C++ based game engine I've been developing. Currently includes an ECS, custom scripting, a GUI, and numerous other features."
-					/>
+						githubLink="https://github.com/noahpete/game_engine"
+						description="A C++ based game engine. Currently includes an ECS, custom scripting, a GUI, and numerous other features."
+					>
+						{/* <Image
+							className="mt-2"
+							src="/gedemo.gif"
+							alt="Game engine demo"
+							width={320}
+							height={100}
+						/> */}
+					</ProjectCard>
 				</div>
 
 				<div className="flex w-full">
 					<ProjectCard
 						title="Tip Tracker"
-						link=""
+						githubLink="https://github.com/noahpete/tip-tracker"
 						description="Web app that tracks tips from serving, providing various analytics and insights."
 					/>
 					<ProjectCard
 						className="ml-auto"
 						title="Powerbot"
-						link=""
+						githubLink="https://github.com/noahpete/powerbot"
 						description="A video-streaming web app designed for music enthusiasts seeking an efficient way to curate music video playlists."
 					/>
 				</div>
@@ -73,27 +81,51 @@ export default function Home() {
 				<div className="flex w-full">
 					<ProjectCard
 						title="SpiroVR"
-						link=""
+						githubLink=""
 						description="A VR spirometry test suite that aims to make pulmonary medical tests more engaging. Utilizes a custom Arduino-based spirometer."
-					/>
+					>
+						{/* <Image
+							className="mt-2"
+							src="/spiro.gif"
+							alt="SpiroVR demo"
+							width={320}
+							height={100}
+						/> */}
+					</ProjectCard>
 					<ProjectCard
 						className="ml-auto"
 						title="A2 Go!"
-						link=""
+						githubLink=""
 						description="An AR mobile game akin to Pokémon Go, blending real-world geography with virtual game play elements."
-					/>
+					>
+						{/* <Image
+							className="mt-2"
+							src="/a2go.gif"
+							alt="SpiroVR demo"
+							width={320}
+							height={100}
+						/> */}
+					</ProjectCard>
 				</div>
 
 				<div className="flex w-full">
 					<ProjectCard
 						title="Unreal Exercise"
-						link=""
+						githubLink=""
 						description="A project exercising my abilities in Unreal Engine, specifically focusing on VR experiences."
-					/>
+					>
+						{/* <Image
+							className="mt-2"
+							src="/ue.gif"
+							alt="SpiroVR demo"
+							width={320}
+							height={100}
+						/> */}
+					</ProjectCard>
 					<ProjectCard
 						className="ml-auto"
 						title="CNN Image Classifier"
-						link=""
+						githubLink=""
 						description="Custom deep neural network that successfully differentiates photos of European landmarks with >85% accuracy."
 					/>
 				</div>
@@ -161,7 +193,7 @@ export default function Home() {
 			{/* Coursework */}
 			<h1 className="text-xl font-extrabold mb-1">Coursework</h1>
 			<div className="flex w-full">
-				<ProjectCard title="Computer Organization" link="" description="">
+				<ProjectCard title="Computer Organization" githubLink="" description="">
 					<ul className="list-disc pl-5">
 						<li>Mini-CPU assembler, simulator, and assembly multiplier</li>
 						<li>Pipelined datapath and memory cache simulators</li>
@@ -169,7 +201,12 @@ export default function Home() {
 						<li>ARM assembly</li>
 					</ul>
 				</ProjectCard>
-				<ProjectCard className="ml-auto" title="Machine Learning" link="" description="">
+				<ProjectCard
+					className="ml-auto"
+					title="Machine Learning"
+					githubLink=""
+					description=""
+				>
 					<ul className="list-disc pl-5">
 						<li>
 							Applications in data mining, computer vision, speech recognition, and
@@ -181,7 +218,7 @@ export default function Home() {
 				</ProjectCard>
 			</div>
 			<div className="flex w-full">
-				<ProjectCard title="Computer Security" link="" description="">
+				<ProjectCard title="Computer Security" githubLink="" description="">
 					<ul className="list-disc pl-5">
 						<li>Cryptography theory: AES, Diffie-Hellman, RSA</li>
 						<li>Web security: XSS, CSRF, SQLi, TLS, DNS attacks</li>
@@ -191,7 +228,7 @@ export default function Home() {
 						</li>
 					</ul>
 				</ProjectCard>
-				<ProjectCard className="ml-auto" title="Web Systems" link="" description="">
+				<ProjectCard className="ml-auto" title="Web Systems" githubLink="" description="">
 					<ul className="list-disc pl-5">
 						<li>Flask/React-based Instagram clone</li>
 						<li>
