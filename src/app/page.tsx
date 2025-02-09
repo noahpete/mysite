@@ -13,7 +13,7 @@ export default function Home() {
 				<div className="mb-2 flex">
 					<h1 className="text-2xl font-extrabold">Noah Peters</h1>
 					<div className="flex ml-auto text-2xl gap-x-2 mt-2 text-gray-400">
-						<Link href="nope@umich.edu">
+						<Link href="mailto:nope@umich.edu">
 							<MdEmail className="hover:text-black" />
 						</Link>
 						<Link href="https://github.com/noahpete">
